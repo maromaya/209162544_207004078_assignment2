@@ -123,7 +123,7 @@ while i<K:
 result_index=[]
 res_centroids=[]
 for centroid in centroid_list:
-    res_centroids.append(centroid.to_numpy().tolist())
+    res_centroids.append(centroid.values.tolist())
     result_index.append(str(int(centroid.name)))
 inner=inner.values.tolist()
 returned_tuple_from_c=mykmeanssp.fit(K,N,d,iteration_number,eps, inner,res_centroids)
